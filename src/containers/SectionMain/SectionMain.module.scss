@@ -1,0 +1,39 @@
+.sectionMain {
+  width: 100%;
+  height: 484px;
+  background: url("../../assets/img/menu2.jpg") no-repeat right;
+  background-size: auto;
+  border: 1px solid;
+  @media screen and (min-width: 1480px){
+    background-size: cover;
+  }
+}
+.sectionWrapper{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 94px;
+  background: linear-gradient(90deg, #211F20 35%, rgba(68, 64, 63, 0) 100%);
+}
+.infoBlock{
+  width: 613px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotate(-8.37deg);
+  h1{
+    text-shadow: 
+    -5px 3px 0px rgb(0, 0, 0),
+    -5px 3px 0px rgb(255, 255, 255),
+    ;
+  }
+  button{
+    width: 229px;
+    height: 35.85px;
+    transform: skew(-15deg);
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,15 @@
+//Add fonts
+@font-face {
+  font-family: Zing;
+  src: url("./fonts/FontsFree-Net-ZingRustDemo-Base.otf");
+}
+@font-face {
+  font-family: GilroyReg;
+  src: url("./fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: GilroyBold;
+  src: url("./fonts/Gilroy-Bold.ttf");
+}
+
+@import './scss/vars.scss';
