@@ -1,0 +1,17 @@
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 88px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+.tabsBox{
+  width: 100%;
+}
+.tabsWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
