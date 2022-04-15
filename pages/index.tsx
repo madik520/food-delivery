@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 import { Tab, Tabs, Box } from '@mui/material';
+import SectionCarousel from '../src/containers/SectionCarousel';
 
 import { useState } from 'react';
 import type { NextPage } from 'next';
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
           </Tabs>
         </Box>
       </Container>
-      <h3>Hello</h3>
+      <SectionCarousel />
     </>
   );
 };

@@ -1,5 +1,8 @@
+import type { StaticImageData } from "next/image";
+
 export interface ICardItem {
-  img: string;
+  id: number;
+  img: StaticImageData | string;
   title: string; 
   spanText: string;
   mainText: string;

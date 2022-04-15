@@ -1,0 +1,30 @@
+.cardItem {
+  max-width: 325px;
+  height: 385px;
+  background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  color: #fff;
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+  p{
+    color:rgba(207, 207, 207, 1);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  p{
+    font-size: 12px;
+  }
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  padding-left: 16px;
+}

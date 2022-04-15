@@ -37,7 +37,7 @@ const Header = () => {
                 <Image src={PhoneIcon} alt='icon' />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText className={styles.textItem} primary={"Contact: "} secondary={"+7 (917) 510-57-59"} />
+            <ListItemText className={styles.textItem} primary={"Contact: "} secondary={"+3 (333) 333-33-33"} />
           </div>
           <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} />
       </Container>
