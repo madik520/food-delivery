@@ -22,20 +22,20 @@ const CardItem = ({
   }: ICardItem) => {
   return(
     <Card className={styles.cardItem}>
-      <CardActionArea>
-        <Link href={`/card-info/${id}`}>
+      <Link href={`/card-info/${id}`}>
+        <CardActionArea>
           <Image src={img} alt="img" placeholder={'blur'} layout={'responsive'} />
-          <CardContent>
-            <Typography className={styles.cardHeader} gutterBottom variant="h5" component="div">
-              {title}
-              <Typography variant="body2" color="text.secondary">{spanText}</Typography>
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {mainText}
-            </Typography>
-          </CardContent>
-        </Link>
-      </CardActionArea>
+        </CardActionArea>
+      </Link>
+      <CardContent>
+        <Typography className={styles.cardHeader} gutterBottom variant="h5" component="div">
+          {title}
+        <Typography variant="body2" color="text.secondary">{spanText}</Typography>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {mainText}
+        </Typography>
+      </CardContent>
       <CardActions className={styles.cardFooter}>
         <Typography variant="h5" component="div">
           {`${price ? price : 0} $`}
