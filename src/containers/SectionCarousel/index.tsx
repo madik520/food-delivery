@@ -1,124 +1,105 @@
 import CardItem from '../../components/CardItem';
-import Carousel from "react-multi-carousel";
-import type { CarouselProps } from 'react-multi-carousel';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper';
 
 import Img1 from '../../assets/img/item1.jpg';
+import Img2 from '../../assets/img/item2.jpg';
+import Img3 from '../../assets/img/item3.jpg';
+import Img4 from '../../assets/img/item4.jpg';
 import styles from './SectionCarousel.module.scss';
-import "react-multi-carousel/lib/styles.css";
+import 'swiper/css';
 
 const MOCDATA = [
   {
     id: 1,
     img: Img1,
-    title: "Гусь",
+    title: "Goose",
     spanText: "Weght: 300g",
-    mainText: "Фаршированный яблоками",
-    price: 600
+    mainText: "Stuffed with apples",
+    price: 750
   },
   {
     id: 2,
-    img: Img1,
-    title: "Индейка",
+    img: Img2,
+    title: "Duck",
     spanText: "Weght: 225g",
-    mainText: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
-    price: 1600
+    mainText: "Stuffed with rice, dried apricots and quince",
+    price: 50
   },
   {
     id: 3,
-    img: Img1,
-    title: "Гусь",
+    img: Img3,
+    title: "Lamb",
     spanText: "Weght: 300g",
-    mainText: "Фаршированный яблоками",
-    price: 600
+    mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
+    price: 1200
   },
   {
     id: 4,
-    img: Img1,
-    title: "Гусь",
+    img: Img4,
+    title: "Turkey",
     spanText: "Weght: 300g",
-    mainText: "Фаршированный яблоками",
-    price: 600
+    mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
+    price: 550
   },
   {
     id: 5,
     img: Img1,
-    title: "Гусь",
+    title: "Goose",
     spanText: "Weght: 300g",
-    mainText: "Фаршированный яблоками",
-    price: 600
+    mainText: "Stuffed with apples",
+    price: 750
   },
   {
     id: 6,
-    img: Img1,
-    title: "Индейка",
-    spanText: "Weght: 225g",
-    mainText: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
-    price: 1600
+    img: Img4,
+    title: "Turkey",
+    spanText: "Weght: 300g",
+    mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
+    price: 550
   },
   {
     id: 7,
     img: Img1,
-    title: "Гусь",
+    title: "Goose",
     spanText: "Weght: 300g",
-    mainText: "Фаршированный яблоками",
-    price: 600
+    mainText: "Stuffed with apples",
+    price: 750
   },
   {
     id: 8,
-    img: Img1,
-    title: "Индейка",
-    spanText: "Weght: 225g",
-    mainText: "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
-    price: 1600
+    img: Img3,
+    title: "Lamb",
+    spanText: "Weght: 300g",
+    mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
+    price: 1200
   },
 ];
 
-const SectionCarousel = ({ deviceType }:any) => {
-  const responsive = {
-    desktop: {
-      breakpoint: {
-        max: 3000,
-        min: 1024
-      },
-      items: 4,
-      slidesToSlide: 2,
-      partialVisibilityGutter: 40
-    },
-    tablet: {
-      breakpoint: {
-        max: 1024,
-        min: 200
-      },
-      items: 2,
-      slidesToSlide: 2,
-      partialVisibilityGutter: 30
-    },
-    mobile: {
-      breakpoint: {
-        max: 464,
-        min: 0
-      },
-      items: 1,
-      slidesToSlide: 1,
-      partialVisibilityGutter: 30
-    }
-  };
-  console.log(deviceType)
+const SectionCarousel = () => {
   return(
     <section className={styles.sectionCarousel}>
-      <Carousel
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          deviceType={deviceType}
-          itemClass={styles.carouselItem}
-          shouldResetAutoplay={false}
-          centerMode={deviceType !== "mobile" ? true : false}
-        >
-        {MOCDATA.map((item) => {
-          return <CardItem
-            key={item.id}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        freeMode={true}
+        className="mySwiper"
+        modules={[FreeMode]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+          1600: {
+            slidesPerView: 5,
+          }
+        }}
+      >
+      {MOCDATA.map((item) => {
+          return <SwiperSlide key={item.id}>
+            <CardItem
             id={item.id}
             img={item.img}
             title={item.title}
@@ -126,8 +107,9 @@ const SectionCarousel = ({ deviceType }:any) => {
             spanText={item.spanText}
             price={item.price}
           />
+          </SwiperSlide>
         })}
-      </Carousel>
+      </Swiper>
     </section>
   );
 };

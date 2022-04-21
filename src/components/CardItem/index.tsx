@@ -23,7 +23,7 @@ const CardItem = ({
   return(
     <Card className={styles.cardItem}>
       <Link href={`/card-info/${id}`}>
-        <CardActionArea>
+        <CardActionArea className={styles.cardImg}>
           <Image src={img} alt="img" placeholder={'blur'} layout={'responsive'} />
         </CardActionArea>
       </Link>
