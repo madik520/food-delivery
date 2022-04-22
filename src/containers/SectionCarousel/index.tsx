@@ -1,84 +1,22 @@
 import CardItem from '../../components/CardItem';
+import Title from '../../components/Title';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper';
+import classNames from 'classnames';
 
-import Img1 from '../../assets/img/item1.jpg';
-import Img2 from '../../assets/img/item2.jpg';
-import Img3 from '../../assets/img/item3.jpg';
-import Img4 from '../../assets/img/item4.jpg';
+import { ISectionCarousel } from './SectionCarousel';
+
 import styles from './SectionCarousel.module.scss';
 import 'swiper/css';
 
-const MOCDATA = [
-  {
-    id: 1,
-    img: Img1,
-    title: "Goose",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with apples",
-    price: 750
-  },
-  {
-    id: 2,
-    img: Img2,
-    title: "Duck",
-    spanText: "Weght: 225g",
-    mainText: "Stuffed with rice, dried apricots and quince",
-    price: 50
-  },
-  {
-    id: 3,
-    img: Img3,
-    title: "Lamb",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-    price: 1200
-  },
-  {
-    id: 4,
-    img: Img4,
-    title: "Turkey",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-    price: 550
-  },
-  {
-    id: 5,
-    img: Img1,
-    title: "Goose",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with apples",
-    price: 750
-  },
-  {
-    id: 6,
-    img: Img4,
-    title: "Turkey",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-    price: 550
-  },
-  {
-    id: 7,
-    img: Img1,
-    title: "Goose",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with apples",
-    price: 750
-  },
-  {
-    id: 8,
-    img: Img3,
-    title: "Lamb",
-    spanText: "Weght: 300g",
-    mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-    price: 1200
-  },
-];
 
-const SectionCarousel = () => {
+const SectionCarousel = ({ cardData, title, borderBottom = false }:ISectionCarousel) => {
+  const borderClass = classNames(styles.sectionCarousel, {
+    [styles.active]: borderBottom
+  })
   return(
-    <section className={styles.sectionCarousel}>
+    <section className={borderClass}>
+      <Title title={title} />
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -97,7 +35,7 @@ const SectionCarousel = () => {
           }
         }}
       >
-      {MOCDATA.map((item) => {
+      {cardData.map((item) => {
           return <SwiperSlide key={item.id}>
             <CardItem
             id={item.id}

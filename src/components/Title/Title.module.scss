@@ -1,0 +1,15 @@
+.title{
+    display: flex;
+    align-items: center;
+    padding-left: 91px;
+    h2{
+        text-transform: uppercase;
+    }
+}
+
+.titleStroke {
+    width: 33px;
+    height: 4px;
+    background: #618967;
+    transform: rotate(90deg);
+}

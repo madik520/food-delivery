@@ -1,15 +1,15 @@
 import SectionMain from '../src/containers/SectionMain';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-
-import { Tab, Tabs, Box } from '@mui/material';
 import SectionCarousel from '../src/containers/SectionCarousel';
+import SectionOurCafe from '../src/containers/SectionOurCafe';
+import Container from '@mui/material/Container';
+import { Tab, Tabs, Box } from '@mui/material';
 
 import { useState } from 'react';
 import type { NextPage } from 'next';
 
 import styles from '../src/assets/scss/home.module.scss';
 import { tabsData } from '../src/utils/datas/tabsData/tabsData';
+import { coldSnacks, hotSnacks, meatDishes } from '../src/utils/datas/cardData/cardData';
 
 const Home: NextPage = () => {
   const [value, setValue] = useState<number>(0);
@@ -36,7 +36,10 @@ const Home: NextPage = () => {
           </Tabs>
           </Container>
         </Box>
-      <SectionCarousel />
+      <SectionCarousel title={"cold snacks"} cardData={coldSnacks} borderBottom={true} />
+      <SectionCarousel title={"hot snacks"} cardData={hotSnacks} borderBottom={true} />
+      <SectionCarousel title={"meat dishes"} cardData={meatDishes} />
+      <SectionOurCafe />
     </>
   );
 };
