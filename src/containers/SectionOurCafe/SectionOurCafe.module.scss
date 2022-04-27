@@ -1,6 +1,8 @@
 .sectionOurCafe {
+    position: relative;
+    top: 150px;
     width: 100%;
-    padding: 93px 37px 0 40px;
+    padding: 0 37px 0 40px;
     box-sizing: border-box;
 }
 .ourCafeWrapper {
@@ -19,10 +21,18 @@
     background: linear-gradient(90deg, #211F20 32%, rgba(68, 64, 63, 0) 100%);
 }
 .aboutCafe {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h2{
         text-transform: uppercase;
     }
     p{
+        width: 90%;
+        padding: 26px 0 60px;
+        font-size: 20px;
         color:rgba(207, 207, 207, 1);
     }
     button {
@@ -41,5 +51,24 @@
 }
 
 .cafeIconBlock {
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    margin: auto;
+}
+.cafeIconItem {
+    width: 228px;
+    height: 227px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(80, 75, 74, 0.9);
+    backdrop-filter: blur(4px);
+    span{
+        margin-top: 30px;
+        font-size: 18px;
+        color: #ffffff;
+    }
 }

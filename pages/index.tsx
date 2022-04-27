@@ -1,6 +1,7 @@
 import SectionMain from '../src/containers/SectionMain';
 import SectionCarousel from '../src/containers/SectionCarousel';
 import SectionOurCafe from '../src/containers/SectionOurCafe';
+import SectionContact from '../src/containers/SectionContact';
 import Container from '@mui/material/Container';
 import { Tab, Tabs, Box } from '@mui/material';
 
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
       <SectionCarousel title={"hot snacks"} cardData={hotSnacks} borderBottom={true} />
       <SectionCarousel title={"meat dishes"} cardData={meatDishes} />
       <SectionOurCafe />
+      <SectionContact />
     </>
   );
 };

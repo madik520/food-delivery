@@ -1,5 +1,10 @@
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Image from 'next/image';
+
+import IconItem1 from '../../assets/img/icon-item1.svg';
+import IconItem2 from '../../assets/img/icon-item2.svg';
+import IconItem3 from '../../assets/img/icon-item3.svg';
 
 import styles from './SectionOurCafe.module.scss';
 
@@ -26,8 +31,23 @@ const SectionOurCafe = () => {
             <Button>view menu</Button>
           </div>
           <div className={styles.cafeIconBlock}>
-
-          </div>
+            <div className={styles.cafeIconItem}>
+              <Image src={IconItem1} alt={"icon"} />
+              <span>Freshest Products</span>
+            </div>
+            <div className={styles.cafeIconItem}>
+              <Image src={IconItem2} alt={"icon"} />
+              <span>Fast shipping</span>
+            </div>
+            <div className={styles.cafeIconItem}>
+              <Image src={IconItem3} alt={"icon"} />
+              <span>The best chefs</span>
+            </div>
+            <div className={styles.cafeIconItem}>
+              <Image src={IconItem1} alt={"icon"} />
+              <span>Freshest Products</span>
+            </div>
+          </div>  
         </div>
       </div>
     </section>
