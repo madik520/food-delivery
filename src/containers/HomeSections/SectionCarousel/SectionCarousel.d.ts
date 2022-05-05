@@ -1,4 +1,4 @@
-import { ICardItem } from '../../components/CardItem/CardItem';
+import { ICardItem } from '../../../components/CardItem/CardItem';
 
 export interface ISectionCarousel {
     title: string;

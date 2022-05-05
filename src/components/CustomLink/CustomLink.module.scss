@@ -1,11 +1,22 @@
 .customButton { 
-  text-transform: capitalize;
+  border-radius: 10px;
+  @media screen and (max-width: 980px){
+    max-width: 62px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span{
+      order: 2;
+    }
+  }
 }
 .withIcon {
   margin-left: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 1;
 }
 .shopCartWrapper {
   display: flex;
@@ -16,6 +27,16 @@
     width: 26px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     transform: rotate(90deg);
+    @media screen and (max-width: 980px){
+      display: none;
+    }
+  }
+  @media screen and (max-width: 980px){
+    width: 48px;
+    padding: 5px 0;
+    transform: rotate(0deg);
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -30,4 +51,5 @@
   color: rgba(64, 60, 59, 1);
   font-size: 12px;
   line-height: 14.32px;
+  order: 1;
 }

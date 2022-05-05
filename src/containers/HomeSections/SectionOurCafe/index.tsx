@@ -2,9 +2,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 
-import IconItem1 from '../../assets/img/icon-item1.svg';
-import IconItem2 from '../../assets/img/icon-item2.svg';
-import IconItem3 from '../../assets/img/icon-item3.svg';
+import IconItem1 from '../../../assets/img/icon-item1.svg';
+import IconItem2 from '../../../assets/img/icon-item2.svg';
+import IconItem3 from '../../../assets/img/icon-item3.svg';
 
 import styles from './SectionOurCafe.module.scss';
 

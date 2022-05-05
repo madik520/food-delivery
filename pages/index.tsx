@@ -1,7 +1,7 @@
-import SectionMain from '../src/containers/SectionMain';
-import SectionCarousel from '../src/containers/SectionCarousel';
-import SectionOurCafe from '../src/containers/SectionOurCafe';
-import SectionContact from '../src/containers/SectionContact';
+import SectionMain from '../src/containers/HomeSections/SectionMain';
+import SectionCarousel from '../src/containers/HomeSections/SectionCarousel';
+import SectionOurCafe from '../src/containers/HomeSections/SectionOurCafe';
+import SectionContact from '../src/containers/HomeSections/SectionContact';
 import Container from '@mui/material/Container';
 import { Tab, Tabs, Box } from '@mui/material';
 

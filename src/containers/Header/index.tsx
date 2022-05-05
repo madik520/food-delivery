@@ -41,6 +41,29 @@ const Header = () => {
           </div>
           <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} />
       </Container>
+      <Container className={styles.containerMobile}>
+        <div className={styles.mobileMenu}>
+          <div className={styles.hamburger}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>menu</p>
+          </div>
+          <Typography className={styles.logo} variant="h3">
+            LOGOS
+          </Typography>
+          <CustomLink link={"/cart"} text={'cart'} isShopCart={true} />
+        </div>
+        <Paper className={styles.inputForm} component={'form'}>
+              <Image src={LocalIcon} alt="icon" />
+              <InputBase
+                className={styles.inputSearch}
+                placeholder={'Enter shipping address'}
+                inputProps={{ 'aria-label': 'enter shipping address' }}
+              />
+              <Image src={SearchIcon} alt="icon" />
+          </Paper>
+      </Container>
     </header>
   );
 };

@@ -1,7 +1,12 @@
+@import "../../assets/scss/vars.scss";
+
 .header {
   width: 100%;
   height: 99px;
   background-color: rgba(64, 60, 59, 1);
+  @media screen and (max-width: 980px){
+    height: 142px;
+  }
 }
 .headerContainer{
   width: 100%;
@@ -12,6 +17,9 @@
   padding-left: 98px;
   padding-right: 70px;
   box-sizing: border-box;
+  @media screen and (max-width: 980px){
+    display: none;
+  }
 }
 .inputForm {
   width: 555px;
@@ -21,12 +29,17 @@
   padding: 14px;
   background-color: rgba(80, 75, 74, 1);
   border-radius: 10px;
+  @media screen and (max-width: 980px){
+    width: 100%;
+    margin-top: 9px;
+  }
 }
 .contact{
   display: flex;
   align-items: center;
 }
 .logo{
+  font-family: $GilroyBold;
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -47,4 +60,49 @@
   p{
     color: #ffffff
   }
+}
+
+//Mobile header
+.containerMobile {
+  max-width: 900px;
+  height: 100%;
+  padding: 12px 15px 13px;
+  @media screen and (min-width: 981px){
+    display: none;
+  }
+}
+.mobileMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .hamburger {
+    max-width: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+      width: 25px;
+      height: 3px;
+      background: #65906C;
+      border-radius: 50px;
+      margin-bottom: 3px;
+      &:last-child{
+        margin-bottom: 5px;
+      }
+    }
+    p{
+      margin: 0;
+      font-family: $GilroyBold;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+}
+.mobileSearch {
+
 }

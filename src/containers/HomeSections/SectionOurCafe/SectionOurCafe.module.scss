@@ -4,11 +4,14 @@
     width: 100%;
     padding: 0 37px 0 40px;
     box-sizing: border-box;
+    @media screen and (max-width: 1024px){
+        display: none;
+    }
 }
 .ourCafeWrapper {
     width: 100%;
     height: 610px;
-    background-image: url("../../assets/img/ourcafe-bg.jpg");
+    background-image: url("../../../assets/img/ourcafe-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

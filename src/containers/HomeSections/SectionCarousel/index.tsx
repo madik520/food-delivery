@@ -1,5 +1,5 @@
-import CardItem from '../../components/CardItem';
-import Title from '../../components/Title';
+import CardItem from '../../../components/CardItem';
+import Title from '../../../components/Title';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper';
 import classNames from 'classnames';
@@ -27,7 +27,10 @@ const SectionCarousel = ({ cardData, title, borderBottom = false }:ISectionCarou
           640: {
             slidesPerView: 2,
           },
-          1024: {
+          900: {
+            slidesPerView: 3,
+          },
+          1200: {
             slidesPerView: 4,
           },
           1600: {

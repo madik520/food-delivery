@@ -1,18 +1,25 @@
-@import '../../assets/scss/vars.scss';
+@import '../../../assets/scss/vars.scss';
 
 .sectionContact {
   width: 100%;
   height: 665px;
-  background-image: url("../../assets/img/contact-bg.jpg");
+  background-image: url("../../../assets/img/contact-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+  background-position: top center;
+  @media screen and (max-width: 980px){
+    min-height: 860px;
+  }
 }
 .sectionWrapper{
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 980px){
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .conctactFormBlock{
@@ -21,15 +28,22 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  &:last-child{
+    align-items: center;
+  }
 }
 
 .contactForm {
-  width: 526px;
-  height: 405px;
+  max-width: 526px;
+  min-width: 342px;
+  min-height: 405px;
   margin-bottom: 40px;
   background: rgba(46, 43, 44, 1);
   box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
+  @media screen and (max-width: 980px){
+    margin-top: 20px;
+  }
 }
 .formHeader {
   width: 100%;
@@ -52,10 +66,11 @@
 }
 .infoBlock{
   display: flex;
-  padding-left: 25px;
+  padding-left: 52px;
   .infoIcon {
+    width: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-top: 2px;
   }
@@ -66,6 +81,7 @@
       color: #CFCFCF;
     }
     p{
+      width: 90%;
       font-size: 16px;
       color: #ffffff;
     }
@@ -104,6 +120,13 @@
       line-height: 15px;
     }
   }
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+    text-align: center;
+    button{
+      margin-bottom: 18px;
+    }
+  }
 }
 
 .formFooter {
@@ -119,9 +142,48 @@
     margin-right: 26px;
     color: #ffffff;
   }
-  .footerIcons {
-    span{
+  .footerIcon {
+    display: flex;
+    .socIcon {
       margin-right: 10px;
+      cursor: pointer;
+      &:last-child{
+        margin: 0;
+      }
     }
+  }
+}
+
+.geolocationMark {
+  position: relative;
+  top: 90px;
+  width: 98px;
+  height: 98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: $GilroyBold;
+  line-height: 20px;
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  border-radius: 50%;
+  &::after{
+    content: '';
+   border: 18px solid transparent;
+   border-top: 18px solid rgba(109, 155, 116, 1);
+   border-image-slice: 2;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto;
+   bottom: -32px;
+   width: 0;
+  }
+  @media screen and (max-width: 980px){
+    position: relative;
+    top: 0
   }
 }

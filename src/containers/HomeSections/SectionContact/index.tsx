@@ -4,12 +4,12 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 
-import Location from '../../assets/img/geolocal.svg';
-import Mail from '../../assets/img/mail.svg';
-import Facebook from '../../assets/img/facebook.svg';
-import Vk from '../../assets/img/vk.svg';
-import Youtube from '../../assets/img/youtube.svg';
-import Insta from '../../assets/img/insta.svg';
+import Location from '../../../assets/img/geolocal.svg';
+import Mail from '../../../assets/img/mail.svg';
+import Facebook from '../../../assets/img/facebook.svg';
+import Vk from '../../../assets/img/vk.svg';
+import Youtube from '../../../assets/img/youtube.svg';
+import Insta from '../../../assets/img/insta.svg';
 import styles from './SectionContact.module.scss';
 
 const SectionContact = () => {
@@ -23,15 +23,15 @@ const SectionContact = () => {
             </div>
             <div className={styles.formInfo}>
               <div className={styles.infoBlock}>
-                <ListItemAvatar className={styles.infoIcon}>
+                <div className={styles.infoIcon}>
                   <Image src={Location} alt='icon' />
-                </ListItemAvatar>
+                </div>
                 <ListItemText className={styles.infoText} primary={"Our address:"} secondary={"MO, city district Krasnogorsk, village Ilyinkoe, Experimental street, 10"} />
               </div>
               <div className={styles.infoBlock}>
-                <ListItemAvatar className={styles.infoIcon}>
+                <div className={styles.infoIcon}>
                   <Image src={Mail} alt='icon' />
-                </ListItemAvatar>
+                </div>
                 <ListItemText className={styles.infoText} primary={"Our mail:"} secondary={"auto.wash@gmail.com"} />
               </div>
             </div>
@@ -44,17 +44,20 @@ const SectionContact = () => {
             </div>
             <div className={styles.formFooter}>
               <Typography variant='body2'>We are in social networks:</Typography>
-              <div className={styles.footerIcons}>
-                <Image src={Facebook} alt='icon' />
-                <Image src={Vk} alt='icon' />
-                <Image src={Youtube} alt='icon' />
-                <Image src={Insta} alt='icon' />
+              <div className={styles.footerIcon}>
+                <div className={styles.socIcon}><Image  src={Facebook} alt='icon' /></div>
+                <div className={styles.socIcon}><Image  src={Vk} alt='icon' /></div>
+                <div className={styles.socIcon}><Image  src={Youtube} alt='icon' /></div>
+                <div className={styles.socIcon}><Image  src={Insta} alt='icon' /></div>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.conctactFormBlock}>
-          
+          <div className={styles.geolocationMark}>
+            <span>we</span>
+            <span>here</span>
+          </div>
         </div>
       </div>
     </section>

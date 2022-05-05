@@ -1,0 +1,97 @@
+@import "../../assets/scss/vars.scss";
+
+.footer{
+  width: 100%;
+  padding: 26px 0 30px 40px;
+  box-sizing: border-box;
+}
+
+.footerWrapper {
+  display: flex;
+  @media screen and (max-width: 1024px){
+    justify-content: center;
+  }
+}
+.goingUpBtn {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  svg {
+    transform: rotate(90deg);
+  }
+  @media screen and (max-width: 375px){
+    position: absolute;
+    left: 16px;
+  }
+}
+.politics {
+  margin: 0 86px 0 55px;
+  h3{
+    font-family: $GilroyBold;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+  p{
+    margin-top: 15px;
+    font-family: $GilroyReg;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #CFCFCF;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+      margin-top: 7px;
+      font-family: $GilroyReg;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 16px;
+      text-decoration-line: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.2);
+      //border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  @media screen and (max-width: 1024px){
+    text-align: center;
+    ul{
+      li{
+        
+      }
+    }
+  }
+}
+.footerNavigation {
+  height: 100%;
+  margin: auto 0;
+  .navLists {
+    display: flex;
+    align-items: center;
+    li{
+      display: block;
+      margin-right: 50px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      a{
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px){
+    display: none;
+  }
+}
