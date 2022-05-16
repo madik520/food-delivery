@@ -18,7 +18,7 @@ const Footer = () => {
           </Typography>
           <Typography variant='body2'>
             © LLC IC "APSHERON"<br />
-            All rights reserved. 2010-2020
+            All rights reserved. 2010-{(new Date().getFullYear())}
           </Typography>
           <ul >
             <li>Terms of use</li>

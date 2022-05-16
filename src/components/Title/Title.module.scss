@@ -5,6 +5,9 @@
     h2{
         text-transform: uppercase;
     }
+    @media screen and (max-width: 420px) {
+        padding-left: 15px;
+    }
 }
 
 .titleStroke {

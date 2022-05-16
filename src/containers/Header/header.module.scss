@@ -5,6 +5,9 @@
   height: 99px;
   background-color: rgba(64, 60, 59, 1);
   @media screen and (max-width: 980px){
+    position: sticky;
+    z-index: 10;
+    top: 0;
     height: 142px;
   }
 }
@@ -67,6 +70,7 @@
   max-width: 900px;
   height: 100%;
   padding: 12px 15px 13px;
+  background-color: rgba(64, 60, 59, 1);
   @media screen and (min-width: 981px){
     display: none;
   }
