@@ -1,0 +1,70 @@
+.tabser {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 78px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(64, 60, 59, 1);
+  box-shadow: 0px 30px 60px rgba(34, 31, 32, 0.2);
+  @media screen and (max-width: 980px){
+    top: 70px;
+  }
+}
+
+.scrollTabs {
+  @media screen and (max-width: 980px){
+    position: fixed;
+  }
+}
+
+.tabsBox{
+  height: 100%;
+  margin: auto;
+}
+
+.tabsContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 88px;
+  box-sizing: border-box;
+  @media screen and (max-width: 970px) {
+    padding-left: 0;
+    padding-right: 0;
+    
+  }
+}
+
+.tabsWrapper{
+  width: 100%;
+  height: 100%;
+  padding-top: calc(78px / 4);
+  color: #fff;
+}
+
+.shoppingCartSticky {
+  position: relative;
+  right: 0px;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: -50px 0px 30px -9px rgba(64, 60, 59, 1);
+  animation: fade-in .3s ease-in;
+  @media screen and (max-width: 980px){
+    display: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
