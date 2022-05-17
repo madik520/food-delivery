@@ -1,23 +1,26 @@
 export const tabsData = [
   {
     id: 1,
-    label: "Cold snacks"
+    label: "Cold snacks",
+    sectionId: "coldSnacks",
   },
   {
     id: 2,
-    label: "Hot snacks"
+    label: "Hot snacks",
+    sectionId: "hotSnacks",
   },
   {
     id: 3,
-    label: "Meat dishes"
+    label: "Meat dishes",
+    sectionId: "meatDishes",
   },
   {
     id: 4,
-    label: "Soups"
+    label: "Soups",
   },
   {
     id: 5,
-    label: "Fish dishes"
+    label: "Fish dishes",
   },
   {
     id: 6,

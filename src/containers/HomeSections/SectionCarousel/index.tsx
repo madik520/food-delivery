@@ -10,12 +10,12 @@ import styles from './SectionCarousel.module.scss';
 import 'swiper/css';
 
 
-const SectionCarousel = ({ cardData, title, borderBottom = false }:ISectionCarousel) => {
+const SectionCarousel = ({ id, cardData, title, borderBottom = false }:ISectionCarousel) => {
   const borderClass = classNames(styles.sectionCarousel, {
     [styles.active]: borderBottom
   })
   return(
-    <section className={borderClass}>
+    <section id={id} className={borderClass}>
       <Title title={title} />
       <Swiper
         slidesPerView={1}
