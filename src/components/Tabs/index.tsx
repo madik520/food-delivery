@@ -2,7 +2,7 @@ import Container from '@mui/material/Container';
 import CustomLink from '../CustomLink';
 import { Tab, Tabs, Box } from '@mui/material';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 
 import { tabsData } from '../../utils/datas/tabsData/tabsData';
