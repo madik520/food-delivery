@@ -10,7 +10,9 @@ export const coldSnacks = [
       title: "Goose",
       spanText: "Weght: 300g",
       mainText: "Stuffed with apples",
-      price: 750
+      price: 750,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 2,
@@ -18,7 +20,9 @@ export const coldSnacks = [
       title: "Duck",
       spanText: "Weght: 225g",
       mainText: "Stuffed with rice, dried apricots and quince",
-      price: 50
+      price: 50,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 3,
@@ -26,7 +30,9 @@ export const coldSnacks = [
       title: "Lamb",
       spanText: "Weght: 300g",
       mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-      price: 1200
+      price: 1200,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 4,
@@ -34,7 +40,9 @@ export const coldSnacks = [
       title: "Turkey",
       spanText: "Weght: 300g",
       mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-      price: 550
+      price: 550,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 5,
@@ -42,7 +50,9 @@ export const coldSnacks = [
       title: "Goose",
       spanText: "Weght: 300g",
       mainText: "Stuffed with apples",
-      price: 750
+      price: 750,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 6,
@@ -50,7 +60,9 @@ export const coldSnacks = [
       title: "Turkey",
       spanText: "Weght: 300g",
       mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-      price: 550
+      price: 550,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 7,
@@ -58,7 +70,9 @@ export const coldSnacks = [
       title: "Goose",
       spanText: "Weght: 300g",
       mainText: "Stuffed with apples",
-      price: 750
+      price: 750,
+      count: 0,
+      dishes: "coldSnacks"
     },
     {
       id: 8,
@@ -66,7 +80,9 @@ export const coldSnacks = [
       title: "Lamb",
       spanText: "Weght: 300g",
       mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-      price: 1200
+      price: 1200,
+      count: 0,
+      dishes: "coldSnacks"
     },
 ];
 
@@ -77,7 +93,9 @@ export const hotSnacks = [
     title: "Goose",
     spanText: "Weght: 300g",
     mainText: "Stuffed with apples",
-    price: 10000
+    price: 10000,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 10,
@@ -85,7 +103,9 @@ export const hotSnacks = [
     title: "Duck",
     spanText: "Weght: 225g",
     mainText: "Stuffed with rice, dried apricots and quince",
-    price: 170
+    price: 170,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 11,
@@ -93,7 +113,9 @@ export const hotSnacks = [
     title: "Lamb",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-    price: 560
+    price: 560,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 12,
@@ -101,7 +123,9 @@ export const hotSnacks = [
     title: "Turkey",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-    price: 325
+    price: 325,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 13,
@@ -109,7 +133,9 @@ export const hotSnacks = [
     title: "Goose",
     spanText: "Weght: 300g",
     mainText: "Stuffed with apples",
-    price: 1440
+    price: 1440,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 14,
@@ -117,7 +143,9 @@ export const hotSnacks = [
     title: "Turkey",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-    price: 720
+    price: 720,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 15,
@@ -125,7 +153,9 @@ export const hotSnacks = [
     title: "Goose",
     spanText: "Weght: 300g",
     mainText: "Stuffed with apples",
-    price: 15
+    price: 15,
+    count: 0,
+    dishes: "hotSnacks"
   },
   {
     id: 16,
@@ -133,7 +163,9 @@ export const hotSnacks = [
     title: "Lamb",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-    price: 225
+    price: 225,
+    count: 0,
+    dishes: "hotSnacks"
   },
 ];
 
@@ -144,7 +176,9 @@ export const meatDishes = [
     title: "Goose",
     spanText: "Weght: 300g",
     mainText: "Stuffed with apples",
-    price: 560
+    price: 560,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 18,
@@ -152,7 +186,9 @@ export const meatDishes = [
     title: "Duck",
     spanText: "Weght: 225g",
     mainText: "Stuffed with rice, dried apricots and quince",
-    price: 250
+    price: 250,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 19,
@@ -160,7 +196,9 @@ export const meatDishes = [
     title: "Lamb",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-    price: 345
+    price: 345,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 20,
@@ -168,7 +206,9 @@ export const meatDishes = [
     title: "Turkey",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-    price: 425
+    price: 425,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 21,
@@ -176,7 +216,9 @@ export const meatDishes = [
     title: "Goose",
     spanText: "Weght: 300g",
     mainText: "Stuffed with apples",
-    price: 1024
+    price: 1024,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 22,
@@ -184,7 +226,9 @@ export const meatDishes = [
     title: "Turkey",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge, dried apricots, orange and green apple",
-    price: 635
+    price: 635,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 23,
@@ -192,7 +236,9 @@ export const meatDishes = [
     title: "Goose",
     spanText: "Weght: 300g",
     mainText: "Stuffed with apples",
-    price: 820
+    price: 820,
+    count: 0,
+    dishes: "meatDishes"
   },
   {
     id: 24,
@@ -200,6 +246,8 @@ export const meatDishes = [
     title: "Lamb",
     spanText: "Weght: 300g",
     mainText: "Stuffed with buckwheat porridge,dried apricots, orange and green apple",
-    price: 295
+    price: 295,
+    count: 0,
+    dishes: "meatDishes"
   },
 ];

@@ -42,7 +42,7 @@ const CustomTabs = ({ top = 0, isTop, handleClickGetId }:ICustomTubs) => {
           scrollButtons={false}
         >
           {tabsData.map(({id, label, sectionId }) => {
-            return <Tab onClick={() => isHandleClick(sectionId)} key={id} className={styles.tabs} label={label} />
+            return <Tab key={id} onClick={() => isHandleClick(sectionId)} className={styles.tabs} label={label} />
           })}
         </Tabs>
         {isTop && <div className={styles.shoppingCartSticky}>

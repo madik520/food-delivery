@@ -1,11 +1,11 @@
 .cardItem {
-  width: 325px;
+  max-width: 325px;
   height: 385px;
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   color: #fff;
-  overflow: hidden;
   cursor: grab;
+  overflow: hidden;
   a{
     text-decoration: none;
     color: #fff;
@@ -40,4 +40,21 @@
   justify-content: space-between;
   padding: 0 16px 0 16px;
   box-sizing: border-box;
+}
+
+.badge {
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  width: 305px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 50%;
+  span{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+
 }

@@ -1,9 +1,24 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { rootReducer } from '../reducers/combineReducer';
+import {
+  Action,
+  configureStore,
+  ThunkAction,
+} from '@reduxjs/toolkit';
+
 import thunk from 'redux-thunk';
 
-const createStoreWithMiddleware = composeWithDevTools(applyMiddleware(thunk))(createStore);
-const store = createStoreWithMiddleware(rootReducer);
+import { rootReducer } from '../reducers/rootReducer';
 
-export default store;
+export const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
+  devTools: process.env.NODE_ENV === "development"
+});
+
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppThunk<ReturnType = void> = ThunkAction<
+   ReturnType,
+   RootState,
+   unknown,
+   Action<string>
+ >;

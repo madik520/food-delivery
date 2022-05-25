@@ -5,16 +5,18 @@ import SectionContact from '../src/containers/HomeSections/SectionContact';
 import CustomTabs from '../src/components/Tabs';
 
 import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
+import { RootState } from '../src/store/store';
 import type { NextPage } from 'next';
 
 import styles from '../src/assets/scss/home.module.scss';
-import { coldSnacks, hotSnacks, meatDishes } from '../src/utils/datas/cardData/cardData';
-
 
 const Home: NextPage = () => {
   const [top, setTop] = useState<number>(0);
   const [isTop, setIsTop] = useState<boolean>(false);
   const [getId, setId] = useState<string | undefined>(undefined);
+  const state = useSelector((state: RootState) => state.shoppingCart.cartData);
 
   const handleClickGetId = (id: string | undefined) => setId(id);
 
@@ -51,7 +53,9 @@ const Home: NextPage = () => {
       handleScroll();
       handleOffsetTop();
     });
+    window.addEventListener("click", scrollToSection)
     return () => {
+      window.removeEventListener("click", scrollToSection)
       window.removeEventListener("scroll", () => {
         handleScroll();
         handleOffsetTop();
@@ -62,9 +66,9 @@ const Home: NextPage = () => {
     <>
       <SectionMain />
       <CustomTabs top={top} isTop={isTop} handleClickGetId={handleClickGetId} />
-      <SectionCarousel id={"coldSnacks"} title={"cold snacks"} cardData={coldSnacks} borderBottom={true} />
-      <SectionCarousel id={"hotSnacks"} title={"hot snacks"} cardData={hotSnacks} borderBottom={true} />
-      <SectionCarousel id={"meatDishes"} title={"meat dishes"} cardData={meatDishes} />
+      <SectionCarousel id={"coldSnacks"} title={"cold snacks"} cardData={state.coldSnacks} borderBottom={true} />
+      <SectionCarousel id={"hotSnacks"} title={"hot snacks"} cardData={state.hotSnacks} borderBottom={true} />
+      <SectionCarousel id={"meatDishes"} title={"meat dishes"} cardData={state.meatDishes} />
       <SectionOurCafe />
       <SectionContact />
     </>

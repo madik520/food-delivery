@@ -9,7 +9,7 @@ import theme from '../src/utils/mui/theme';
 import createEmotionCache from '../src/utils/mui/createEmotionCache';
 
 import { Provider } from 'react-redux';
-import store from '../src/store/store';
+import { store } from '../src/store/store';
 
 import '../src/assets/global.scss';
 
@@ -23,7 +23,7 @@ interface MyAppProps extends AppProps {
 const MyApp = (props: MyAppProps) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
-    <Provider store={store} >
+    <Provider store={store}>
       <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -37,6 +37,7 @@ const MyApp = (props: MyAppProps) => {
         </ThemeProvider>
       </CacheProvider>
     </Provider>
+
   );
 }
 
