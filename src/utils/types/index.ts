@@ -1,4 +1,4 @@
-import { ICardItem } from '../../components/CardItem/CardItem';
+import { dishesNames, ICardItem } from '../../components/CardItem/CardItem';
 
 export interface IState {
   cartData: {
@@ -7,4 +7,10 @@ export interface IState {
     meatDishes: ICardItem[];
   },
   shoppingCart: ICardItem[];
+}
+
+export interface IDeleteCount {
+  id: number;
+  count: number;
+  dishes: dishesNames.coldSnacks | dishesNames.hotSnacks | dishesNames.meatDishes;
 }

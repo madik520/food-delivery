@@ -9,7 +9,7 @@ import styles from './CustomLink.module.scss';
 
 const CustomLink = ({ text, withIcon, isShopCart, shopCount, link, onClick }:ICustomLink) => {
   return(
-    <Link href={link}>
+    <Link className={styles.customLink} href={link}>
       <Button onClick={onClick} className={styles.customButton} variant={'contained'}>
       <span>{text}</span>
       {isShopCart ? 

@@ -11,6 +11,8 @@ import CustomLink from '../../components/CustomLink';
 
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { useAppSelector } from '../../utils/hooks/AppHooks';
+import { RootState } from '../../store/store';
 
 import LocalIcon from '../../assets/img/location.svg';
 import SearchIcon from '../../assets/img/search.svg';
@@ -52,6 +54,7 @@ const LINKS: LinksTypes[] = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [top, setTop] = useState<number>(0);
+  const shopCart = useAppSelector((state: RootState) => state.shoppingCart.shoppingCart)
 
   const handleOpenMenu = () => setIsOpen(true);
   const handleCloseMenu = () => setIsOpen(false);
@@ -95,7 +98,7 @@ const Header = () => {
             </ListItemAvatar>
             <ListItemText className={styles.textItem} primary={"Contact: "} secondary={"+3 (333) 333-33-33"} />
           </div>
-          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} />
+          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} shopCount={shopCart.length} />
       </Container>
       <Container className={styles.containerMobile}>
         <div id={"divers"} className={styles.mobileMenu}>
@@ -108,7 +111,7 @@ const Header = () => {
           <Typography className={styles.logo} variant="h3">
             LOGOS
           </Typography>
-          <CustomLink link={"/cart"} text={'cart'} isShopCart={true} />
+          <CustomLink link={"/cart"} text={'cart'} isShopCart={true} shopCount={shopCart.length} />
         </div>
         <Paper className={isShowInput} component={'form'}>
               <Image src={LocalIcon} alt="icon" />

@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 
-import { addItemInCart } from "../actions/actionCartItem";
+import { addItemInCart, removeItemFromCart, deleteCountItem } from "../actions/actionCartItem";
 import { IState } from "../utils/types";
 import { ICardItem } from "../components/CardItem/CardItem";
 import { coldSnacks, hotSnacks, meatDishes } from '../utils/datas/cardData/cardData';
@@ -27,8 +27,21 @@ const shoppingCart = createReducer(initialState, (builder) => {
 
     state.shoppingCart = newShoppingCart as [];
     state.cartData[currentItem.dishes] = updateCardItem;
+  });
+  builder.addCase(removeItemFromCart, (state, action) => {
+    const newData = state.shoppingCart.filter((i) => i.id !== action.payload);
+
+    state.shoppingCart = newData;
+  });
+  builder.addCase(deleteCountItem, (state, action) => {
+    const { id, count, dishes } = action.payload;
+    const updateCountCardItem = state.cartData[dishes].map((i) => i.id === id ? {...i, count: count} : i);
+    const updateCountShoppingCart = state.shoppingCart.map((i) => i.id === id ? {...i, count: count} : i);
+
+    state.cartData[dishes] = updateCountCardItem;
+    state.shoppingCart = updateCountShoppingCart;
   })
-  builder.addDefaultCase((state, action) => state)
+  builder.addDefaultCase((state, action) => state);
 });
 
 export default shoppingCart;

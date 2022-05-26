@@ -1,4 +1,5 @@
 export const itemConstants = {
   addItem: "item/add",
-  deleteItem: "iteme/delete"
+  deleteItem: "item/delete",
+  deleteCount: "item/deleteCount"
 }

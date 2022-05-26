@@ -4,6 +4,8 @@ import { Tab, Tabs, Box } from '@mui/material';
 
 import { useState } from 'react';
 import classNames from 'classnames';
+import { useAppSelector } from '../../utils/hooks/AppHooks';
+import { RootState } from '../../store/store';
 
 import { tabsData } from '../../utils/datas/tabsData/tabsData';
 
@@ -13,6 +15,7 @@ import styles from './Tabs.module.scss';
 
 const CustomTabs = ({ top = 0, isTop, handleClickGetId }:ICustomTubs) => {
   const [value, setValue] = useState<number>(0);
+  const shoppingCart = useAppSelector((state: RootState) => state.shoppingCart.shoppingCart)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -46,7 +49,7 @@ const CustomTabs = ({ top = 0, isTop, handleClickGetId }:ICustomTubs) => {
           })}
         </Tabs>
         {isTop && <div className={styles.shoppingCartSticky}>
-          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} />
+          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} shopCount={shoppingCart.length} />
         </div>}
       </Container>
     </Box>

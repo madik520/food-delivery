@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image";
 
-enum dishesNames {
+export enum dishesNames {
   coldSnacks = "coldSnacks",
   hotSnacks = "hotSnacks",
   meatDishes = "meatDishes"
