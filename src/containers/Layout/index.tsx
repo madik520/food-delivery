@@ -9,7 +9,9 @@ const Layout:FC = ({ children }) => {
   return(
     <div className={styles.layout}>
       <Header />
-      {children}
+      <main className={styles.main}>
+        {children}
+      </main>
       <Footer />
     </div>
   );

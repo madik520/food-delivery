@@ -43,12 +43,15 @@ const SectionCarousel = ({ id, cardData, title, borderBottom = false }:ISectionC
             <CardItem
             id={item.id}
             img={item.img}
+            bigImg={item.bigImg}
             title={item.title}
             mainText={item.mainText}
-            spanText={item.spanText}
+            weight={item.weight}
             price={item.price}
             count={item.count}
             dishes={item.dishes}
+            ingridients={item.ingridients}
+            description={item.description}
           />
           </SwiperSlide>
         })}

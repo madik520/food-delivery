@@ -1,4 +1,11 @@
 .layout{
   max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: linear-gradient(360deg, #211F20 0%, #44403F 100%);
+}
+.main {
+  flex: 1;
 }

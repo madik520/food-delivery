@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 
-import { addItemInCart, removeItemFromCart, deleteCountItem } from "../actions/actionCartItem";
+import { addItemInCart, removeItemFromCart, deleteCountItem, sendDataItem } from "../actions/actionCartItem";
 import { IState } from "../utils/types";
 import { ICardItem } from "../components/CardItem/CardItem";
 import { coldSnacks, hotSnacks, meatDishes } from '../utils/datas/cardData/cardData';
@@ -11,7 +11,8 @@ const initialState: IState = {
     hotSnacks: hotSnacks as [],
     meatDishes: meatDishes as []
   },
-  shoppingCart: [] as ICardItem[]
+  shoppingCart: [] as ICardItem[],
+  itemDescription: {} as ICardItem
 }
 
 const shoppingCart = createReducer(initialState, (builder) => {
@@ -40,6 +41,9 @@ const shoppingCart = createReducer(initialState, (builder) => {
 
     state.cartData[dishes] = updateCountCardItem;
     state.shoppingCart = updateCountShoppingCart;
+  });
+  builder.addCase(sendDataItem, (state, action) => {
+    state.itemDescription = action.payload;
   })
   builder.addDefaultCase((state, action) => state);
 });

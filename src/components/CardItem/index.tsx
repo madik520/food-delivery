@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Link from '../../utils/mui/Link';
 
 import { useAppDispatch } from '../../utils/hooks/AppHooks';
-import { addItemInCart, removeItemFromCart, deleteCountItem } from '../../actions/actionCartItem';
+import { addItemInCart, removeItemFromCart, deleteCountItem, sendDataItem } from '../../actions/actionCartItem';
 
 import CartIcon from '../../assets/img/cart.svg';
 import AddIcon from '../../assets/img/add-icon.svg';
@@ -21,17 +21,20 @@ import styles from './CardItem.module.scss';
 
 const CardItem = ({
     id,
-    img, 
+    img,
+    bigImg, 
     title, 
-    spanText, 
+    weight, 
     mainText, 
     price,
     count,
-    dishes
+    dishes,
+    description,
+    ingridients
   }: ICardItem) => {
     const dispatch = useAppDispatch();
 
-    const handleAddItemInCart = () => dispatch(addItemInCart({id, img, title, spanText, mainText, price, dishes, count: count += 1}));
+    const handleAddItemInCart = () => dispatch(addItemInCart({id, img, bigImg, title, weight, mainText, price, dishes, count: count += 1}));
     const handleDeleteCountAndItem = () => {
       if(count <= 1){
         dispatch(deleteCountItem({id, count: count -= 1, dishes}))
@@ -40,9 +43,12 @@ const CardItem = ({
         dispatch(deleteCountItem({id, count: count -= 1, dishes}))
       }
     }
+
+    const sendItemDetails = () => dispatch(sendDataItem({ id, img, bigImg, title, weight, mainText, price, dishes, count, description, ingridients }))
+
   return(
     <Card className={styles.cardItem}>
-      <Link href={`/card-info/${id}`}>
+      <Link onClick={sendItemDetails} href={`/card-info/${id}`}>
         <CardActionArea className={styles.cardImg}>
           <Image src={img} alt="img" placeholder={'blur'} layout={'responsive'} />
         </CardActionArea>
@@ -53,7 +59,7 @@ const CardItem = ({
       <CardContent>
         <Typography className={styles.cardHeader} gutterBottom variant="h5" component="div">
           {title}
-        <Typography variant="body2" color="text.secondary">{spanText}</Typography>
+        <Typography variant="body2" color="text.secondary">Weight: {weight}g</Typography>
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {mainText}

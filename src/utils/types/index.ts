@@ -7,6 +7,7 @@ export interface IState {
     meatDishes: ICardItem[];
   },
   shoppingCart: ICardItem[];
+  itemDescription: ICardItem
 }
 
 export interface IDeleteCount {

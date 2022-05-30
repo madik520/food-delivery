@@ -18,6 +18,7 @@ import LocalIcon from '../../assets/img/location.svg';
 import SearchIcon from '../../assets/img/search.svg';
 import PhoneIcon from '../../assets/img/phone.svg';
 import Close from '../../assets/img/close.svg';
+import CartIcon from '../../assets/img/cart.svg';
 
 import styles from './header.module.scss';
 
@@ -78,9 +79,11 @@ const Header = () => {
   return(
     <header className={styles.header}>
       <Container className={styles.headerContainer} maxWidth={"xl"}>
-          <Typography className={styles.logo} variant="h3">
-            LOGOS
-          </Typography>
+          <Link style={{ textDecoration: 'none' }} href={'/'}>
+            <Typography className={styles.logo} variant="h3">
+              LOGOS
+            </Typography>
+          </Link>
           <Paper className={styles.inputForm} component={'form'}>
               <Image src={LocalIcon} alt="icon" />
               <InputBase
@@ -98,7 +101,7 @@ const Header = () => {
             </ListItemAvatar>
             <ListItemText className={styles.textItem} primary={"Contact: "} secondary={"+3 (333) 333-33-33"} />
           </div>
-          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} shopCount={shopCart.length} />
+          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} shopCount={shopCart.length} icon={CartIcon} />
       </Container>
       <Container className={styles.containerMobile}>
         <div id={"divers"} className={styles.mobileMenu}>
@@ -111,7 +114,7 @@ const Header = () => {
           <Typography className={styles.logo} variant="h3">
             LOGOS
           </Typography>
-          <CustomLink link={"/cart"} text={'cart'} isShopCart={true} shopCount={shopCart.length} />
+          <CustomLink link={"/cart"} text={'cart'} isShopCart={true} shopCount={shopCart.length} icon={CartIcon} />
         </div>
         <Paper className={isShowInput} component={'form'}>
               <Image src={LocalIcon} alt="icon" />

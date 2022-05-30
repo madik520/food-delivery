@@ -1,0 +1,61 @@
+.descBlock {
+  max-width: 1210px;
+  min-height: 399px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  border-radius: 10px;
+}
+
+.descImgBlock {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descTextBlock {
+  width: 50%;
+}
+
+.mainInfo {
+  width: 70%;
+  padding-top: 38px;
+  padding-left: 50px;
+  color: #ffffff;
+  GilroyReg
+  h3 {
+    margin: 0;
+    font-size: 25px;
+  }
+  p {
+    color: #CFCFCF;
+    font-size: 14px;
+  }
+  .weightInfo {
+    margin-top: 70px;
+    .priceWithBtn {
+      display: flex;
+      align-items: center;
+      .price {
+        margin-left: 25px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.tableHeader {
+  font-family: GilroyReg;
+  color: #ffffff;
+  padding: 30px 0px 10px 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tableFooter {
+  font-family: GilroyReg;
+  color: #ffffff;
+  padding: 5px 0px 0px 50px;
+  border: 0;
+}

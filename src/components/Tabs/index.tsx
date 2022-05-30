@@ -1,6 +1,7 @@
 import Container from '@mui/material/Container';
 import CustomLink from '../CustomLink';
 import { Tab, Tabs, Box } from '@mui/material';
+import { ICustomTubs } from './Tabs';
 
 import { useState } from 'react';
 import classNames from 'classnames';
@@ -9,7 +10,7 @@ import { RootState } from '../../store/store';
 
 import { tabsData } from '../../utils/datas/tabsData/tabsData';
 
-import { ICustomTubs } from './Tabs';
+import CartIcon from '../../assets/img/cart.svg'
 import styles from './Tabs.module.scss';
 
 
@@ -49,7 +50,7 @@ const CustomTabs = ({ top = 0, isTop, handleClickGetId }:ICustomTubs) => {
           })}
         </Tabs>
         {isTop && <div className={styles.shoppingCartSticky}>
-          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} shopCount={shoppingCart.length} />
+          <CustomLink link={"/cart"} text={'Cart'} isShopCart={true} shopCount={shoppingCart.length} icon={CartIcon} />
         </div>}
       </Container>
     </Box>
