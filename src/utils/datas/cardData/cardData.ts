@@ -30,7 +30,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -69,7 +69,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -108,7 +108,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -147,7 +147,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -186,7 +186,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -225,7 +225,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -264,7 +264,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -303,7 +303,7 @@ export const coldSnacks = [
         },
         {
           id: nanoid(),
-          col: "Carbohydrates",
+          col: "Carbs",
           val: 22.35
         },
         {
@@ -345,7 +345,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -384,7 +384,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -423,7 +423,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -462,7 +462,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -501,7 +501,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -540,7 +540,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -579,7 +579,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -618,7 +618,7 @@ export const hotSnacks = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -660,7 +660,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -699,7 +699,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -738,7 +738,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -777,7 +777,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -816,7 +816,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -855,7 +855,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -894,7 +894,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {
@@ -933,7 +933,7 @@ export const meatDishes = [
       },
       {
         id: nanoid(),
-        col: "Carbohydrates",
+        col: "Carbs",
         val: 22.35
       },
       {

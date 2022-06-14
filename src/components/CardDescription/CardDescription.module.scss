@@ -1,22 +1,49 @@
 .descBlock {
-  max-width: 1210px;
+  width: 100%;
   min-height: 399px;
-  margin: auto;
+  margin: 10px auto 0;
   display: flex;
-  flex-wrap: wrap;
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   border-radius: 10px;
+  @media screen and (max-width: 980px){
+    width: 90%;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 620px){
+    width: 100%;
+  }
 }
 
 .descImgBlock {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 980px){
+    width: 100%;
+  }
+  .deskImg {
+    width: 100%;
+    height: 100%;
+    span {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      @media screen and (max-width: 980px){
+        border-radius: 0;
+      }
+    }
+  }
 }
 
 .descTextBlock {
   width: 50%;
+  @media screen and (max-width: 980px){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .mainInfo {
@@ -24,38 +51,112 @@
   padding-top: 38px;
   padding-left: 50px;
   color: #ffffff;
-  GilroyReg
+  font-family: GilroyReg;
   h3 {
     margin: 0;
     font-size: 25px;
+    @media screen and (max-width: 980px){
+      text-align: center;
+    }
   }
   p {
     color: #CFCFCF;
     font-size: 14px;
+    @media screen and (max-width: 980px){
+      text-align: center;
+    }
   }
   .weightInfo {
     margin-top: 70px;
     .priceWithBtn {
       display: flex;
       align-items: center;
+      .inShopBtn {
+        button {
+          width: 145px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+          div {
+            width: 50px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
       .price {
         margin-left: 25px;
         font-size: 25px;
       }
     }
+    @media screen and (max-width: 980px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 980px){
+    padding-top: 23px;
+    padding-left: 0;
   }
 }
 
-.tableHeader {
-  font-family: GilroyReg;
-  color: #ffffff;
-  padding: 30px 0px 10px 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.tableBlock {
+  width: 100%;
+  margin-top: 30px;
+  @media screen and (max-width: 980px) {
+    padding-bottom: 20px;
+  }
 }
 
-.tableFooter {
-  font-family: GilroyReg;
-  color: #ffffff;
-  padding: 5px 0px 0px 50px;
-  border: 0;
+.tableCol {
+  width: 60%;
+  display: flex;
+  margin-left: 50px;
+  div {
+    width: 100px;
+    display: flex;
+    padding-bottom: 5px;
+    font-family: GilroyReg;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  @media screen and (max-width: 980px) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    div {
+      justify-content: center;
+    }
+  }
+}
+
+.tableRow {
+  width: 60%;
+  display: flex;
+  margin-left: 50px;
+  div {
+    width: 100px;
+    display: flex;
+    padding-top: 5px;
+    font-family: GilroyReg;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  @media screen and (max-width: 980px) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    div {
+      justify-content: center;
+    }
+  }
 }

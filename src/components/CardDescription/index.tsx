@@ -1,6 +1,7 @@
-import { Table, TableHead, TableBody, TableCell, TableRow } from '@mui/material';
+import Divider from '@mui/material/Divider';
+import Button from '@mui/material/Button';
 import Image from 'next/image';
-import CustomLink from '../CustomLink';
+import Link from '../../utils/mui/Link';
 
 import { useAppSelector } from "../../utils/hooks/AppHooks";
 import { RootState } from "../../store/store";
@@ -18,7 +19,9 @@ const CardDescription = () => {
     return (
       <div className={styles.descBlock}>
         <div className={styles.descImgBlock}>
-          <Image src={bigImg} alt={"pictures"} placeholder={"blur"} />
+          <div className={styles.deskImg}>
+            <Image src={bigImg} alt={"pictures"} placeholder={"blur"} layout={'responsive'} />
+          </div>
         </div>
         <div className={styles.descTextBlock}>
           <div className={styles.mainInfo}>
@@ -29,31 +32,33 @@ const CardDescription = () => {
             <div className={styles.weightInfo}>
               <p>Weight: {weight}g</p>
               <div className={styles.priceWithBtn}>
-                <CustomLink isShopCart={true} text={"Cart"} icon={ShopIcon} link={"/cart"} />
+                <Link className={styles.inShopBtn} href={"/cart"}>
+                  <Button variant='contained'>
+                    <div>cart</div>
+                    <Image src={ShopIcon} alt={'icon'} />
+                  </Button>
+                </Link>
                 <span className={styles.price}>{price} $</span>
               </div>
             </div>
           </div>
-          <Table>
-            <TableHead>
-              <TableRow>
-                {description?.map(({ id, col }) => {
-                  return <TableCell align='left' className={styles.tableHeader} key={id}>
-                    <div>
-                      {col}
-                    </div>
-                  </TableCell>
-                })}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                {description?.map(({ val, col }) => {
-                  return <TableCell className={styles.tableFooter} key={col}>{val}</TableCell>
-                })}
-              </TableRow>
-            </TableBody>
-          </Table>
+          <div className={styles.tableBlock}>
+            <div className={styles.tableCol}>
+              { description?.map((i) => {
+                return <div key={i.id}>
+                  {i.col}
+                </div>
+              }) }
+            </div>
+            <Divider sx={{borderColor: 'rgba(255, 255, 255, 0.1)'}} />
+            <div className={styles.tableRow}>
+              { description?.map((item, index) => {
+                return <div key={`${item.id}${index}`}>
+                  {item.val}
+                </div>
+              }) }
+            </div>
+          </div>
         </div>
       </div>
     );

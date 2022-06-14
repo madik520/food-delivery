@@ -1,0 +1,52 @@
+.btnBackWrapper {
+  a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    button {
+      width: 26px;
+      height: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      border-radius: 50%;
+      border: 0;
+      background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+      cursor: pointer;
+      svg {
+        position: relative;
+        left: 3px;
+        font-size: 1rem;
+        color: #ffffff;
+      }
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    position: fixed;
+    top: 200px;
+    left: 50px;
+    z-index: 10;
+    a {
+      button {
+        width: 37px;
+        height: 37px;
+        background: #ffffff;
+        svg {
+          color: #72A479;
+        }
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 560px) {
+    top: 180px;
+    left: 25px;
+  }
+}
