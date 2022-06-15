@@ -3,6 +3,7 @@ import SectionCarousel from '../src/containers/HomeSections/SectionCarousel';
 import SectionOurCafe from '../src/containers/HomeSections/SectionOurCafe';
 import SectionContact from '../src/containers/HomeSections/SectionContact';
 import CustomTabs from '../src/components/Tabs';
+import Modal from '../src/components/Modal';
 
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
   const [isTop, setIsTop] = useState<boolean>(false);
   const [getId, setId] = useState<string | undefined>(undefined);
   const state = useSelector((state: RootState) => state.shoppingCart.cartData);
+  const cardData = useSelector((state: RootState) => state.shoppingCart.shoppingCart);
 
   const handleClickGetId = (id: string | undefined) => setId(id);
 
