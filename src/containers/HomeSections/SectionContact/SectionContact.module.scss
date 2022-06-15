@@ -35,7 +35,7 @@
 
 .contactForm {
   max-width: 526px;
-  min-width: 342px;
+  min-width: 325px;
   min-height: 405px;
   margin-bottom: 40px;
   background: rgba(46, 43, 44, 1);
@@ -141,6 +141,9 @@
     line-height: 19px;
     margin-right: 26px;
     color: #ffffff;
+    @media screen and (max-width: 540px){
+      margin-right: 5px;
+    }
   }
   .footerIcon {
     display: flex;

@@ -11,12 +11,9 @@ import styles from "./CardDescription.module.scss";
 
 const CardDescription = () => {
   const descriptionData = useAppSelector((state: RootState) => state.shoppingCart.itemDescription);
+  const { bigImg, title, weight, price, description, ingridients  } = descriptionData
 
-  if(descriptionData.hasOwnProperty("id")){
-    const { id, bigImg, title, weight, mainText, price, dishes, count, description, ingridients  } = descriptionData
-
-
-    return (
+  return (
       <div className={styles.descBlock}>
         <div className={styles.descImgBlock}>
           <div className={styles.deskImg}>
@@ -61,10 +58,7 @@ const CardDescription = () => {
           </div>
         </div>
       </div>
-    );
-  }else{
-    return <h1>No data :(</h1>
-  }
+  );
 };
 
 export default CardDescription;

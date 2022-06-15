@@ -15,7 +15,7 @@ const CustomLink = ({ text, withIcon, isShopCart, shopCount, link, icon, onClick
       {isShopCart ? 
         <div className={styles.shopCartWrapper}>
           {Number(shopCount) > 0 ? 
-            <div className={styles.shopCount}>{shopCount}</div>
+            <div className={styles.shopCount}><span>{shopCount}</span></div>
             :
             <Image src={icon} alt={'icon'} />
           }

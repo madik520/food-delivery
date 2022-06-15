@@ -34,7 +34,7 @@ const CardItem = ({
   }: ICardItem) => {
     const dispatch = useAppDispatch();
 
-    const handleAddItemInCart = () => dispatch(addItemInCart({id, img, bigImg, title, weight, mainText, price, dishes, count: count += 1}));
+    const handleAddItemInCart = () => dispatch(addItemInCart({id, img, bigImg, title, weight, mainText, price, dishes, description, ingridients, count: count += 1}));
     const handleDeleteCountAndItem = () => {
       if(count <= 1){
         dispatch(deleteCountItem({id, count: count -= 1, dishes}))

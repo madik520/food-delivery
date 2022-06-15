@@ -21,16 +21,6 @@ const Home: NextPage = () => {
   const handleClickGetId = (id: string | undefined) => setId(id);
 
   useEffect(() => {
-    const scrollToSection = () => {
-      if(getId !== undefined){
-        const section = document.getElementById(getId);
-
-        section?.scrollIntoView({
-          block: "center", 
-          behavior: "smooth"
-        })
-      }
-    }
 
     const handleScroll = () => {
       setTop(window.scrollY);
@@ -47,15 +37,12 @@ const Home: NextPage = () => {
 
     handleScroll();
     handleOffsetTop();
-    scrollToSection();
 
     window.addEventListener("scroll", () => {
       handleScroll();
       handleOffsetTop();
     });
-    window.addEventListener("click", scrollToSection)
     return () => {
-      window.removeEventListener("click", scrollToSection)
       window.removeEventListener("scroll", () => {
         handleScroll();
         handleOffsetTop();
