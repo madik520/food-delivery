@@ -1,5 +1,4 @@
 .modalContainer {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,5 +32,9 @@
   a {
     text-decoration: none;
     color: #ffffff;
+  }
+  @media screen and (max-width: 540px){
+    max-width: 332px;
+    height: 318px;
   }
 }
