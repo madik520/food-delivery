@@ -1,4 +1,4 @@
 export interface IModal {
-  isActive: boolean;
-  onClose: () => void;
+	isActive: boolean;
+	onClose: () => void;
 }

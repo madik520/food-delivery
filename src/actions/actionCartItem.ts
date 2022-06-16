@@ -1,9 +1,9 @@
-import { createAction } from "@reduxjs/toolkit";
+import { createAction } from '@reduxjs/toolkit';
 
-import { itemConstants } from "../utils/actionConstants";
+import { itemConstants } from '../utils/actionConstants';
 
-import type { ICardItem } from "../components/CardItem/CardItem";
-import type { IDeleteCount } from "../utils/types";
+import type { ICardItem } from '../components/CardItem/CardItem';
+import type { IDeleteCount } from '../utils/types';
 
 export const addItemInCart = createAction<ICardItem>(itemConstants.addItem);
 

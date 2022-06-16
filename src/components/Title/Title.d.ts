@@ -1,4 +1,4 @@
 export interface ITitle {
-    title: string;
-    itemInCart?: number;
+	title: string;
+	itemInCart?: number;
 }

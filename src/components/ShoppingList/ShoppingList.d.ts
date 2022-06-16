@@ -1,6 +1,6 @@
-import { ICardItem } from "../CardItem/CardItem";
+import { ICardItem } from '../CardItem/CardItem';
 
 export interface IShoppingList {
-  shoppingData: ICardItem[];
-  addToOrderData: ICardItem[];
+	shoppingData: ICardItem[];
+	addToOrderData: ICardItem[];
 }

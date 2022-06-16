@@ -1,6 +1,5 @@
-import shoppingCart from "./cartReduce";
-
+import shoppingCart from './cartReduce';
 
 export const rootReducer = {
-  shoppingCart: shoppingCart
+	shoppingCart: shoppingCart
 };

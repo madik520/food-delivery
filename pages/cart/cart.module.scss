@@ -8,6 +8,9 @@
 .sectionWrapper {
   max-width: 1096px;
   margin: auto;
+  @media screen and (max-width: 640px) {
+    padding: 0 20px;
+  }
 }
 .cartTitle {
   margin-left: 120px;
@@ -24,5 +27,8 @@
     svg {
       font-size: 16px;
     }
+  }
+  @media screen and (max-width: 640px) {
+    margin-left: 0;
   }
 }

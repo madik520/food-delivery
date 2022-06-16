@@ -9,27 +9,23 @@ import type { IModal } from './Modal';
 
 import styles from './Modal.module.scss';
 
-
 const Modal = ({ isActive, onClose }: IModal) => {
-
-  return (
-    <Dialog className={styles.modalContainer} open={isActive} onClose={onClose}>
-      <div className={styles.modalBlock}>
-        <Button className={styles.iconBtn} onClick={onClose}>
-          <Image src={CloseIcon} alt={'close-icon'} />
-        </Button>
-        <div className={styles.isEmptyText}>
-          <Image src={EmptyCart} alt={'empty-cart'} />
-          <Typography variant='h2'>Cart is empty</Typography>
-        </div>
-        <Link onClick={onClose} href={'/'}>
-          <Button variant='contained'>
-            View menu
-          </Button>
-        </Link>
-      </div>
-    </Dialog>
-  )
+	return (
+		<Dialog className={styles.modalContainer} open={isActive} onClose={onClose}>
+			<div className={styles.modalBlock}>
+				<Button className={styles.iconBtn} onClick={onClose}>
+					<Image src={CloseIcon} alt={'close-icon'} />
+				</Button>
+				<div className={styles.isEmptyText}>
+					<Image src={EmptyCart} alt={'empty-cart'} />
+					<Typography variant="h2">Cart is empty</Typography>
+				</div>
+				<Link onClick={onClose} href={'/'}>
+					<Button variant="contained">View menu</Button>
+				</Link>
+			</div>
+		</Dialog>
+	);
 };
 
 export default Modal;
