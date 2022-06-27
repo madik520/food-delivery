@@ -1,0 +1,50 @@
+.checkoutBlock {
+  max-width: 760px;
+  min-height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px auto 0;
+  padding: 0px 39px 0 27px;
+  background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  border-radius: 10px;
+  color: #ffffff;
+  button {
+    width: 209px;
+    height: 51px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 540px) {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.total {
+  text-align: center;
+  p {
+    line-height: 1;
+    &:nth-child(1){
+      font-size: 18px;
+      font-weight: 500;
+      color: #A6A7AB;
+      span {
+        font-size: 25px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    }
+    &:nth-child(2) {
+      font-size: 12px;
+      span {
+        span {
+          color: rgba(114, 164, 121, 1);
+          text-transform: uppercase;
+        }
+      }
+    }
+    &:nth-child(3) {
+      font-size: 12px;
+    }
+  }
+}

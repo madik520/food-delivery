@@ -3,6 +3,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Link from '../../src/utils/mui/Link';
 import Title from '../../src/components/Title';
 import ShoppingList from '../../src/components/ShoppingList';
+import ShoppingCheckout from '../../src/components/ShoppingCheckout';
 
 
 import { useAppSelector } from '../../src/utils/hooks/AppHooks';
@@ -12,6 +13,9 @@ import styles from './cart.module.scss';
 
 const Cart = () => {
   const cartData = useAppSelector((state: RootState) => state.shoppingCart.shoppingCart);
+
+  const totalSumm = cartData.reduce((acc, i) => acc + i.totalSumm, 0);
+
   if(cartData.length > 0){
     return (
       <section className={styles.shoppingCartPage}>
@@ -24,6 +28,7 @@ const Cart = () => {
             <Title title='cart' itemInCart={cartData.length}/>
           </div>
           <ShoppingList shoppingData={cartData} addToOrderData={[]} />
+          <ShoppingCheckout total={totalSumm} />
         </div>
       </section>
     )
